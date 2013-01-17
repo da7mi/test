@@ -79,13 +79,16 @@ cursor_positions:
   - :path: app/views/sessions/register.html.erb
     :cursor_offset: 35
     :timestamp: 2013-01-16 14:10:57 +09:00
+  - :path: app/assets/javascripts/ckeditor.js
+    :cursor_offset: 0
+    :timestamp: 2013-01-12 02:11:11 +09:00
+  - :path: app/controllers/posts_controller.rb
+    :cursor_offset: 428
+    :timestamp: 2013-01-16 17:57:26 +09:00
   - :path: app/views/sessions/_form.html.erb
     :cursor_offset: 342
     :timestamp: 2013-01-16 14:28:51 +09:00
   - :path: app/views/sessions/new.html.erb
-    :cursor_offset: 576
+    :cursor_offset: 469
     :timestamp: 2013-01-16 17:08:58 +09:00
-  - :path: app/controllers/posts_controller.rb
-    :cursor_offset: 303
-    :timestamp: 2013-01-16 17:57:26 +09:00
 files_to_retain: 0

@@ -87,3 +87,8 @@ div#blog_footer_action {
   text-align: right;
   line-height: 30px;
 }
+
+nav.pagination {
+  width: 100%;
+  text-align: center;
+}

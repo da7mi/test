@@ -4,6 +4,9 @@ class Post < ActiveRecord::Base
   validates :title, :presence => true, :length => { :minimum => 5 }
   validates :user_id, :presence => true
 
+  default_scope :order => 'id DESC'
+  paginates_per 5
+  
   has_many :comments
   belongs_to :user
 end

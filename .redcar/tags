@@ -1,4 +1,4 @@
-1358327233
+1358392622
 A	/home/admin/projects/blog/vendor/assets/javascripts/ckeditor/ckeditor.js	function A(c){var j;(j=function(f){var b=c[f?"getPrevious":"getNext"](q);b&&(b.type==CKEDITOR.NODE_ELEMENT&&b.is(c.getName()))&&(y(c,b,null,!f),c.remove(),c=b)})();j(1)}function B(c){return c.type==CKEDITOR.NODE_ELEMENT&&(c.getName()in CKEDITOR.dtd.$block||c.getName()in CKEDITOR.dtd.$listItem)&&CKEDITOR.dtd[c.getName()]["#"]}function v(c,j,f){c.fire("saveSnapshot")
 AddNameToUsers	/home/admin/projects/blog/db/migrate/20130116045453_add_name_to_users.rb	class AddNameToUsers 
 AddUserIdToPosts	/home/admin/projects/blog/db/migrate/20130116061746_add_user_id_to_posts.rb	class AddUserIdToPosts 

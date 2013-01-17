@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     Time.zone = 'Asia/Tokyo'
-    @posts = Post.all(:include => [:user], :order => 'id desc')
+    @posts = Post.page(params[:page]).per(5)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
