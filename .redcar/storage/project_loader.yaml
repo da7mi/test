@@ -1,0 +1,12 @@
+--- 
+open_files: 
+  - app/views/posts/show.html.erb
+  - app/assets/stylesheets/posts.css.scss
+  - app/views/posts/new.html.erb
+  - app/views/posts/index.html.erb
+  - app/assets/stylesheets/application.css
+  - config/locales/ja.yml
+  - app/views/sessions/register.html.erb
+  - app/views/sessions/_form.html.erb
+  - app/views/sessions/new.html.erb
+  - app/controllers/posts_controller.rb

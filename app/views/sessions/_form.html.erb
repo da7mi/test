@@ -1,0 +1,38 @@
+<%= form_for @user, :url => {:action => 'create'} do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :account, "ID" %><br />
+    <%= f.text_field :account %>
+  </div>
+  <div class="field">
+    <%= f.label :password, "パスワード" %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation, "パスワード（確認用）" %><br />
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div class="field">
+    <%= f.label :email, "email" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :account_name, "名前" %><br />
+    <%= f.text_field :account_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<%= hidden_field_tag :referer, request.referer %>
+<% end %>

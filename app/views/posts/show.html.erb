@@ -1,0 +1,48 @@
+<div class="post_area">
+  <div class="title"><%= @post.title %></div>
+  <div class="updated_at"><%= @post.updated_at.strftime("%Y/%m/%d %H:%M:%S") %></div>
+  <div class="contents_before"><%= @post.content.html_safe %></div>
+  <div class="contents_after"><%= @post.content2.html_safe %></div>
+  <div class="comment_area">
+    <h2>コメント一覧</h2>
+    <% @post.comments.each do |comment| %>
+      <div class="post_area">
+        <div class="title"><%= comment.commenter.to_s.concat("さん") %></div>
+        <div class="updated_at"><%= comment.updated_at.strftime("%Y/%m/%d %H:%M:%S") %></div>
+        <div class="contents_before"><%= comment.body.html_safe %></div>
+          <% if current_user != nil && current_user.id == @post.user_id %>
+            <div width="100%" style="padding: 10px; border-top: 1px solid #CCC">
+              <div class="author">&nbsp;</div>
+              <div class="control_area">
+                <%= link_to '削除', [comment.post, comment],
+                 :confirm => 'よろしいですか？',
+                 :method => :delete %>
+              </div>
+              <br clear="all" />
+            </div>
+          <% end %>
+      </div>
+    <% end %>
+    <br />
+    <h2>コメントを書く</h2>
+    <%= form_for([@post, @post.comments.build]) do |f| %>
+      <div class="field">
+        <%= f.label :commenter %><br />
+        <%= f.text_field :commenter %>
+      </div>
+      <div class="field">
+        <%= f.label :body %><br />
+        <%= f.text_area :body , :cols => 30, :rows =>3 %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script language="javascript">
+<!--
+  var editor = CKEDITOR.replace('comment_body');
+//-->
+</script>

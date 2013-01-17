@@ -1,0 +1,23 @@
+<p>ログイン</p>
+<% if flash[:alert] != nil %>
+<div id="error_explanation">
+  <h2>エラー</h2>
+  <ul>
+    <li>ログインできません</li>
+  </ul>
+</div>
+<% end %>
+<%= form_tag sessions_login_path do %>
+<div class="field">
+  <%= label_tag :account, 'ID' %>
+  <%= text_field_tag :account, params[:account] %>
+</div>
+<div class="field">
+  <%= label_tag :password, 'パスワード' %>
+  <%= password_field_tag :password, params[:password] %>
+</div>
+<div class="actions">
+  <%= submit_tag "ログイン" %>
+</div>
+<%= hidden_field_tag :referer, (params[:referer] != nil) ? params[:referer] : request.referer %>
+<% end %>

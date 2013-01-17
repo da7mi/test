@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "ckeditor" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="blog_header">
+      <div id="blog_title">
+        <h1><%= link_to "なんちゃってブログ", root_path %></h1>
+      </div>
+      <div id="header_right">
+        <% if current_user != nil %>
+          <%= link_to '新しい記事を書く', new_post_path %>    
+        <% end %>
+      </div>
+    </div>
+    <br clear="both" />
+    <div id="main_container">
+      <%= yield %>
+    </div>
+    <% if current_user == nil %>
+    <div id="blog_footer_visiter">
+    <% else %>
+    <div id="blog_footer">
+    <% end %>
+      <div id="blog_footer_regist">
+        <% if current_user == nil %>
+          <%= link_to "アカウント開設", sessions_register_path %>
+        <% else %>
+           <%= current_user.account_name.to_s.concat("さんとしてログイン中") %>
+        <% end %>
+      </div>
+      <div id="blog_footer_action">
+        <% if current_user == nil %>
+          <%= link_to "ログイン", sessions_index_path %>
+        <% else %>
+          <%= link_to "ログアウト", sessions_destroy_path, :confirm => "ログアウトします", :method => :get %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
