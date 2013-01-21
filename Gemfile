@@ -45,3 +45,5 @@ group :development do
 end
 
 gem 'kaminari'
+gem 'client_side_validations'
+gem 'event-calendar', :require => 'event_calendar'

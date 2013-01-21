@@ -32,9 +32,6 @@ cursor_positions:
   - :path: app/helpers/application_helper.rb
     :cursor_offset: 0
     :timestamp: 2013-01-11 22:45:51 +09:00
-  - :path: app/models/post.rb
-    :cursor_offset: 286
-    :timestamp: 2013-01-16 15:57:31 +09:00
   - :path: app/assets/stylesheets/scaffolds.css.scss
     :cursor_offset: 780
     :timestamp: 2013-01-16 11:37:28 +09:00
@@ -53,11 +50,23 @@ cursor_positions:
   - :path: app/views/posts/_form.html.erb
     :cursor_offset: 765
     :timestamp: 2013-01-16 15:43:11 +09:00
+  - :path: app/assets/javascripts/ckeditor.js
+    :cursor_offset: 0
+    :timestamp: 2013-01-12 02:11:11 +09:00
+  - :path: app/models/post.rb
+    :cursor_offset: 241
+    :timestamp: 2013-01-17 12:08:06 +09:00
+  - :path: app/views/kaminari/_page.html.erb
+    :cursor_offset: 338
+    :timestamp: 2013-01-17 12:15:15 +09:00
+  - :path: app/views/kaminari/_paginator.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-01-17 12:15:15 +09:00
   - :path: app/controllers/comments_controller.rb
-    :cursor_offset: 252
+    :cursor_offset: 231
     :timestamp: 2013-01-11 20:51:19 +09:00
   - :path: app/views/posts/show.html.erb
-    :cursor_offset: 1112
+    :cursor_offset: 859
     :timestamp: 2013-01-16 17:02:22 +09:00
   - :path: app/assets/stylesheets/posts.css.scss
     :cursor_offset: 1231
@@ -66,29 +75,24 @@ cursor_positions:
     :cursor_offset: 162
     :timestamp: 2013-01-16 11:40:17 +09:00
   - :path: app/views/posts/index.html.erb
-    :cursor_offset: 698
-    :timestamp: 2013-01-16 16:30:37 +09:00
-    :selection_offset: 723
-    :block_selection_mode: false
+    :cursor_offset: 0
+    :timestamp: 2013-01-17 16:23:33 +09:00
   - :path: app/assets/stylesheets/application.css
-    :cursor_offset: 1417
-    :timestamp: 2013-01-16 17:03:31 +09:00
+    :cursor_offset: 549
+    :timestamp: 2013-01-17 12:17:02 +09:00
   - :path: config/locales/ja.yml
-    :cursor_offset: 235
-    :timestamp: 2013-01-16 17:05:45 +09:00
+    :cursor_offset: 4128
+    :timestamp: 2013-01-17 12:14:38 +09:00
   - :path: app/views/sessions/register.html.erb
     :cursor_offset: 35
     :timestamp: 2013-01-16 14:10:57 +09:00
-  - :path: app/assets/javascripts/ckeditor.js
-    :cursor_offset: 0
-    :timestamp: 2013-01-12 02:11:11 +09:00
-  - :path: app/controllers/posts_controller.rb
-    :cursor_offset: 428
-    :timestamp: 2013-01-16 17:57:26 +09:00
   - :path: app/views/sessions/_form.html.erb
     :cursor_offset: 342
     :timestamp: 2013-01-16 14:28:51 +09:00
   - :path: app/views/sessions/new.html.erb
     :cursor_offset: 469
     :timestamp: 2013-01-16 17:08:58 +09:00
+  - :path: app/controllers/posts_controller.rb
+    :cursor_offset: 1008
+    :timestamp: 2013-01-17 12:08:39 +09:00
 files_to_retain: 0
